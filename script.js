@@ -1,11 +1,14 @@
-function getFormvalue(event) {
-    //Write your code here
-event.preventDefault();
+function getFormvalue() {
+    // Prevent the default form submission
+    event.preventDefault();
 
-    // Get the values of the first and last name from the form
-    const firstName = document.forms['form1']['fname'].value;
-    const lastName = document.forms['form1']['lname'].value;
+    // Access the form by name
+    const form = document.forms['form1'];
 
-    // Alert the full name by concatenating the first and last names
+    // Get and trim the values of First Name and Last Name
+    const firstName = form['fname'].value.trim();
+    const lastName = form['lname'].value.trim();
+
+    // Combine names and show in alert
     alert(firstName + " " + lastName);
 }
